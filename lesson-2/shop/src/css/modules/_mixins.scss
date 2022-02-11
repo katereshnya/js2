@@ -1,0 +1,16 @@
+@mixin position-flex($justify: center) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font($fsize, $fline, $fcolor) {
+    font-size: $fsize;
+    line-height: $fline;
+    color: $fcolor;
+}
