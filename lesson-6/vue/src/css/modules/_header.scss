@@ -1,0 +1,256 @@
+.header__top {
+    background: $color-dark;
+    padding: 19px 0;
+}
+
+.header__flex {
+    @include position-flex(space-between);
+}
+
+.header__flex a:hover,
+.header__flex label:hover  {
+    opacity: 0.8;
+}
+
+.header__left a:first-child {
+    margin-right: 41px;
+}
+
+.header__right a:not(:last-child) {
+    margin-right: 33px;
+}
+
+.header__right label:not(:last-child) {
+    margin-right: 33px;
+}
+
+.header__nav {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    padding: 16px 16px 34px 0;
+    @include size(232px, calc(100vh - 80px));
+    overflow-y: scroll;
+    background: #FFFFFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+.header__nav svg {
+    fill: #6F6E6E;
+}
+
+.header__nav svg:hover {
+    opacity: 0.8;
+}
+
+.header__nav div {
+    display: flex;
+    justify-content: end;
+}
+
+.header__nav h2 {
+    margin: 9px 0 24px 34px;
+    @include font(14px, 17px, $color-black);
+}
+
+.header__nav ul {
+    margin-left: 33px;
+    @include font(14px, 17px, $color-pink);
+}
+
+.header__nav ul li {
+    list-style: none;
+}
+
+.header__nav ul ul {
+    margin-left: 20px;
+    margin-top: 12px;
+}
+
+.header__nav ul ul a {
+    text-decoration: none;
+    @include font(14px, 17px, #6F6E6E);
+}
+
+.header__nav ul ul a:hover {
+    color: $color-pink;
+}
+
+.header__nav ul ul li {
+    margin-bottom: 12px;
+}
+
+.header__nav ul ul li:last-child {
+    margin-bottom: 20px;
+}
+
+.nav__checked {
+    display: inline;
+}
+
+.nav__checked label {
+    cursor: pointer;
+}
+
+.nav__checked input {
+    display: none;
+}
+
+.nav__checked input:checked ~ .header__nav {
+    display: block;
+}
+
+.nav__checked input:not(:checked)~ .header__nav {
+    display: none;
+}
+
+    
+.header__navigation {
+    background: #F8F3F4;
+}
+
+.header__navigation div {
+    height: 148px;
+}
+
+.header__menu {
+    list-style: none;
+    display: flex;
+    justify-content:space-between;
+    font-weight: 300;
+    @include font(14px, 17px, #636363);
+}
+
+.header__menu li:last-child {
+    padding-left: 5px;
+}
+
+.header__menu li:not(:last-child) {
+    padding: 0 5px 0;
+    border-right: 1px solid #636363;
+    transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+}
+
+.header__menu li a {
+    display: block;
+    text-decoration: none;
+    font-weight: 300;
+    @include font(14px, 17px, #636363);
+}
+
+.header__menu li a:hover {
+    color: $color-pink;
+}
+
+.header__menu li:last-child a {
+    color: $color-pink;
+}
+
+.header__menu li:not(:last-child) a {
+    transform: skewX(20deg);
+    -ms-transform: skewX(20deg);
+    -webkit-transform: skewX(20deg);
+}
+
+.nav__cart {
+    position: relative;
+    display: inline;
+}
+
+.nav__cart_counter {
+    position: absolute;
+    top: -23px;
+    right: 23px;
+    @include size(19px, 19px);
+    background: #F16D7F;
+    @include font(12px, 14px, $color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.nav__cart_content {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    max-width: 600px;
+    background: #FFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    padding: 10px;
+    z-index: 100;
+    @include font(14px, 17px, $color-black);
+    font-weight: 600;
+}
+
+.cart__content_header, .cart__content_text {
+    display: flex;
+}
+
+.cart__content_header div, .cart__content_text div {
+    padding: 5px;
+    width: 70px;
+    border-bottom: 1px solid #E2E2E2;
+}
+
+.cart__content_header div:first-of-type, .cart__content_text div:first-of-type {
+    width: 270px;
+}
+
+.cart__content_text {
+    font-weight: 300;
+    color: #5D5D5D;
+}
+
+.cart__content_total {
+    padding: 5px;
+    text-align: right;
+}
+
+
+@media (max-width: 755px) {
+
+    .header__right img:not(:first-child) {
+        display: none;        
+    }
+
+    .header__right img:first-child {
+        margin-right: 0;        
+    }    
+    
+    .header__navigation {
+        padding-top: 24px;
+        @include position-flex();
+    }
+
+    .header__navigation > .header__flex {
+        display: block;
+        text-align: center;
+    }
+
+    .header__navigation div {
+        height: 124px;
+    }
+
+    .header__navigation h1 {
+        margin-bottom: 32px;
+    }
+
+    .header__title {
+        padding-top: 0;        
+    }
+
+    .header__title > .header__flex_title {
+        @include position-flex();
+    }
+
+    .header__title h1 {
+        margin-bottom: 0;        
+    }
+}
