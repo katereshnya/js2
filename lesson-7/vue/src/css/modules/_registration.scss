@@ -1,0 +1,155 @@
+.reg__flex {
+    @include position-flex(space-between);
+    align-items: baseline; 
+    margin: 65px 0 96px;
+}
+
+.reg__form {
+    margin-right: 128px;
+}
+
+.reg__form h3 {
+    margin-bottom: 20px;
+    font-weight: 300;
+    @include font(16px, 19px, $color-dark);
+}
+
+.reg__form p {
+    margin: 15px 0 39px;
+    font-weight: 300;
+    max-width: 360px;
+    @include font(13px, 16px, #B1B1B1);
+}
+
+.reg__form input {
+    display: block;
+    margin-bottom: 21px;
+    padding-left: 17px;
+    @include size(360px, 45px);
+    border: 1px solid #A4A4A4;
+    font-weight: 300;
+    @include font(13px, 16px, $color-dark);
+}
+
+.reg__form input::placeholder {
+    font-weight: 300;
+    @include font(13px, 16px, #B1B1B1);
+}
+
+.reg__form section div {
+    margin: 31px 0 12px;
+    @include position-flex(auto);
+}
+
+#male, #female {
+    @include size(17px, 17px);
+}
+
+#female {
+    margin-left: 20px;
+}
+
+.reg__form div label {
+    margin: -20px 0 0 10px;
+    font-weight: 300;
+    @include font(11px, 13px, $color-black);
+}
+
+.reg__form button {
+    position: relative;
+    @include size(167px, 50px);
+    background: $color-pink;
+    @include font(14px, 17px, $color-white);
+    transition-duration: 1s;
+}
+
+.reg__form button:hover {
+    @include size(177px, 50px);
+    background-color: #B55361;
+    border-radius: 50px;
+}
+
+.reg__form button hr {
+    position: absolute;
+    top: 24px;
+    left: 122px;
+    border: none;
+    background-color: $color-white;
+    color: $color-white;
+    @include size(16.29px, 1.4px);
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    display: inline-block;
+}
+
+.reg__form button img {
+    margin-left: 31px;
+}
+
+.reg__info h2 {
+    margin-bottom: 22px;
+    font-weight: 300;
+    @include font(24px, 29px, $color-black);
+    transition-duration: 2s;
+}
+
+.reg__info h2:hover {
+    color: $color-pink;
+    transform: translateX(163px) rotateX(360deg) scale(1.5);
+}
+
+.reg__info p {
+    margin-bottom: 21px;
+    font-weight: 300;
+    @include font(24px, 29px, $color-black);
+}
+
+.reg__info ul {
+    list-style: none;
+}
+
+.reg__info ul li:before {
+    margin-right: 23px;
+    @include size(20px, 16px);
+    content: url(../img/check.svg); 
+}
+
+.reg__info li {
+    margin-bottom: 16px;
+    font-weight: 300;
+    @include font(24px, 29px, $color-black);
+}
+
+
+/*Адаптив*/
+@media (max-width: 1160px) {
+
+    .reg__form {
+        margin-right: 22px;
+    }
+}
+
+@media (max-width: 755px) {
+
+    .reg__flex {
+        display: block;
+    }
+
+    .reg__flex > section {
+        @include position-flex();
+    }
+
+    .reg__form {
+        display: inline-block;
+    }
+
+    .reg__info{
+        margin-top: 40px;
+    }
+
+    .reg__info h2:hover {
+        color: $color-pink;
+        transform: translateX(10px) rotateX(60deg) scale(1);
+    }
+
+}

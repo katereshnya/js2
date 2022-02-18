@@ -1,0 +1,238 @@
+main.cart__wrap {
+    padding: 96px 0 128px;
+}
+
+.cart__wrap {
+    @include position-flex(space-between); 
+    align-items:initial;
+    flex-wrap: wrap;
+    gap: 128px;
+}
+
+.cart__flex,
+.cart__product_flex {
+    @include position-flex(space-between); 
+    align-items:initial;
+}
+
+
+.cart__product {
+    margin-bottom: 40px;
+    box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+}
+
+.cart__product img {
+    @include size(262px, 306px);
+}
+
+.cart__product h2 {
+    margin: 22px 57px 42px 31px;
+    max-width: 262px;
+    @include font(24px, 29px, $color-dark);
+}
+
+.cart__product ul {
+    list-style: none;
+    @include font(22px, 26px, #575757);    
+}
+
+.cart__product ul span {
+    @include font(22px, 26px, $color-pink);    
+}
+
+.cart__product ul li {
+    margin-left: 31px;    
+}
+
+.cart__product svg {
+    fill: $color-black;    
+}
+
+.cart__product svg:hover {
+    fill: $color-pink;    
+}
+
+.cart__control {
+    margin-top: 72px;
+}
+
+.cart__control button {
+    font-weight: 300;
+    @include font(14px, 17px, $color-black);
+    @include size(225px, 50px);
+    border: 1px solid #A4A4A4;
+}
+
+.cart__control button:hover {
+    color: $color-pink;
+    border-color: $color-pink;
+}
+
+.cart__product input[type='number'] {
+    margin-left: 25px;
+    text-align: center;
+    @include font(18px, 22px, #656565); 
+    @include size(44px, 25px);
+    border: 1px solid #EAEAEA;
+    -moz-appearance: textfield;
+}
+
+.cart__product input::-webkit-outer-spin-button,
+.cart__product input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.cart__product button {
+    margin: 28px 22px 0 0;
+    @include size(18px, 18px);
+}
+
+.cart__product svg {
+    fill: #575757;
+}
+
+.cart__form p {
+    margin-top: 17px;
+    font-weight: 300;
+    @include font(16px, 19px, $color-dark);
+}
+
+.cart__form input {
+    display: block;
+    margin-top: 21px;
+    padding-left: 17px;
+    font-weight: 300;
+    @include font(13px, 16px, #B1B1B1);
+    @include size(359px, 44px);
+    border: 1px solid #A4A4A4;
+}
+
+.cart__form input::placeholder {
+    font-weight: 300;
+    @include font(13px, 16px, $color-dark);
+}
+
+.cart__form button {
+    margin-top: 24px;
+    font-weight: 300;
+    @include font(11px, 13px, #A4A4A4);
+    @include size(100px, 34px);
+    border: 1px solid #A4A4A4;
+}
+
+.cart__form button:hover {
+    color: $color-pink;
+    border-color: $color-pink;
+}
+
+.cart__total {
+    margin-top: 57px;
+    padding: 39px 0 42px;
+    @include size(360px, 214px);
+    background: #F5F3F3;
+    text-align: end;
+}
+
+.cart__total p {
+    margin: 0 34px;
+    @include font(11px, 13px, #A4A4A4);
+}
+
+.cart__total p:last-of-type {
+    margin: 12px 37px 0;
+    font-weight: 300;
+    @include font(16px, 19px, $color-dark);
+}
+
+.cart__total p span {
+    margin-left: 26px;
+}
+
+.cart__total p:last-of-type span {
+    color: $color-pink;
+}
+
+.cart__total hr {
+    margin: 21px 42px 0;
+    background: #E2E2E2;
+}
+
+.cart__total button {
+    margin: 17px 42px 0;
+    font-weight: 300;
+    @include font(16px, 19px, $color-white);
+    @include size(273px, 50px);
+    background: #F16D7F;
+}
+
+.cart__total button:hover {
+    color: $color-pink;
+    border: 1px solid $color-pink;
+    background: $color-white;
+}
+
+
+/*Адаптив*/
+@media (max-width: 1160px) {
+
+    main.cart__wrap {
+        padding: 59px 16px 128px;
+    }
+
+    .cart__wrap {
+        display: block;
+        gap: 0;
+    }
+
+    .cart__wrap section:last-child {
+        @include position-flex(); 
+        gap: 15px;
+    }
+
+    .cart__control {
+        @include position-flex(); 
+        gap: 49px;
+        margin-bottom: 64px;
+    }
+
+    .cart__control button {
+        @include size(234px, 50px);
+        @include font(14px, 17px, $color-black);
+    }
+    
+    .cart__total {
+        margin-top: 36px;
+    }    
+
+}
+
+@media (max-width: 755px) {
+
+    main.cart__wrap {
+        padding: 48px 9px 96px;
+    }
+
+    .cart__wrap section:last-child {
+        display: block;
+        text-align: center;
+    }
+
+    .cart__wrap section:last-child {
+        gap: 10px;
+    }
+
+    .cart__control button {
+        @include size(174px, 32px);
+        @include font(12px, 14px, $color-black);
+    }
+
+    .cart__wrap section:last-child form {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .cart__total {
+        display: inline-block;
+    }
+
+}

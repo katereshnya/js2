@@ -1,0 +1,45 @@
+@import "modules/variables";
+@import "modules/mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+h1 {
+    @include font(24px, 29px, $color-pink);
+}
+
+header {
+    position: relative
+}
+
+@import "modules/header";
+
+@import "modules/index";
+@import "modules/catalog";
+@import "modules/cart";
+
+@import "modules/footer";
