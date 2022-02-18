@@ -1,0 +1,202 @@
+.product__presentation {    
+    @include position-flex(space-between);
+    background: #F7F7F7;
+}
+
+.product__presentation a { 
+    border: none;
+    background: rgba(42, 42, 42, 0.15);
+    @include size(47px, 47px);
+    @include position-flex();
+}
+
+.product__presentation a svg {    
+    fill: $color-black;
+    @include size(12px, 21px);
+}
+
+.product__presentation a:hover svg {    
+    fill: $color-pink;
+}
+
+.product__presentation_img {
+    padding-bottom: 64px;
+    list-style: none;
+}
+
+.product__descriprion{
+    margin-top: -64px;
+    text-align: center;
+    max-width: 1140px;
+    border: 1px solid #EAEAEA;
+    background: $color-white;
+}
+
+.product__descriprion h2 {
+    margin-top: 64px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-pink;
+}
+
+.product__descriprion article  hr{
+    max-width: 63px;
+    border: 2px solid $color-pink;
+    display: block;
+    margin: 12px auto;
+}
+
+.product__descriprion hr {
+    max-width: 641px;
+    border: 1px solid #EAEAEA;
+    display: block;
+    margin: 0 auto 65px; 
+}
+
+.product__descriprion h3 {
+    margin-bottom: 48px;
+    font-weight: 300;
+    @include font(18px, 22px, #4D4D4D);
+}
+
+.product__descriprion p {
+    margin-bottom: 65px;
+    font-weight: 300;
+    @include font(24px, 29px, $color-pink);     
+}
+
+.product__description_text {
+    display: flex;
+    justify-content: center;
+}
+
+.product__description_text p {    
+    margin-bottom: 32px;
+    max-width: 555px;
+    font-weight: 300;
+    @include font(14px, 17px, #5E5E5E);   
+}
+
+.product__description_sort {
+    list-style: none;
+    margin-bottom: 49px;
+    display: flex;
+    justify-content: center;
+    @include font(14px, 17px, #6F6E6E);
+}
+
+.product__description_sort summary {
+    @include font(14px, 17px, #6F6E6E);
+}
+
+.product__description_sort svg {
+    margin: 0 23px 2px 9px;
+    width: 11px;
+    height: 5px;
+    fill: #6F6E6E;
+}
+
+.product__description_sort li:last-child svg {
+    margin-right: 0;
+}
+
+.description__sort_item  {
+    position: relative;
+}
+
+.description__sort_item summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.description__sort_item summary::-webkit-details-marker {
+    display:none;
+}
+
+.description__sort_item summary:hover  {
+    color: $color-pink;
+}
+
+.description__sort_item[open] > summary {
+    outline: none;
+    border: none;
+    color: #6F6E6E;
+}
+
+.description__sort_item summary svg {
+    margin-left: 10px;
+    fill: #6F6E6E;
+}
+
+.description__sort_item summary:hover svg {
+    fill: $color-pink;
+}
+
+.description__sort_item[open] > summary svg {
+    fill: #6F6E6E;
+}
+
+.description__sort_item div {    
+    position: absolute;   
+    z-index: 100;
+    padding: 9px;
+    left: -9px;
+    min-width: 60px;
+    @include font(14px, 16px, #6F6E6E);
+    background: #FFFFFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+.description__sort_item[open] div {
+    padding-left: 10px;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+.description__sort_item label {  
+    display: flex;
+    align-items: center;
+}
+
+.description__sort_item div > label:not(:first-child) {  
+    margin-top: 10px;  
+}
+
+.description__sort_item input {
+    margin-right: 9px;
+    border: 1px solid #EBEBEB;
+}
+
+.description__sort_item input[type='number'] {
+    padding-left: 10px;
+    @include size(50px, 25px);
+}
+
+.product__description_button {
+    padding-left: 23px;
+    margin-bottom: 65px;
+    border: 1px solid $color-pink;
+    background-color: $color-white;
+    text-align: left;
+    @include size(211px, 47px);
+    @include font(16px, 19px, $color-pink);
+}
+
+.product__description_button svg {
+    margin: 0 23px -7px 0;
+    fill: $color-pink;
+    @include size(26px, 24px);
+}
+
+.product__description_button:hover {
+    color: $color-white;
+    background-color: $color-pink;
+}
+
+.product__description_button:hover svg {
+    fill: $color-white;
+}
+
+.product__catalog {
+    margin: 129px 0;
+}
